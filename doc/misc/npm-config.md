@@ -246,6 +246,16 @@ A client certificate to pass when accessing the registry.
 If false, never shows colors.  If `"always"` then always shows colors.
 If true, then only prints color codes for tty file descriptors.
 
+### conn-limit
+
+* Default: null
+* Type: Number
+
+If null or not set, no connection limits are imposed. Set to a number to impose
+a limit on the number of connections npm will have open at any one time. This
+is useful when you have routing or proxy conflicts that are getting crushed
+by npms liberal use of open connections in the name of speed.
+
 ### depth
 
 * Default: Infinity
